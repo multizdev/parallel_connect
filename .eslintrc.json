@@ -1,0 +1,85 @@
+{
+  "env": {
+    "shared-node-browser": true,
+    "node":  true,
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier",
+    "@typescript-eslint",
+    "promise"
+  ],
+  "rules": {
+    "import/no-import-module-exports": "off",
+    "@typescript-eslint/consistent-type-assertions": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-cycle": "off",
+    "no-plusplus": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/no-unused-prop-types": "off",
+    "promise/no-nesting": "error",
+    "camelcase": "off",
+    "consistent-return": "off",
+    "no-param-reassign": "off",
+    "no-use-before-define": "off",
+    "prettier/prettier": "error",
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/aria-role": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "react/button-has-type": "off",
+    "no-restricted-imports": ["error", {
+      "patterns": [".*"]
+    }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "overrides": [],
+  "ignorePatterns": ["src/components/ui/**/*.tsx"]
+}

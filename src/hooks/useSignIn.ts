@@ -100,9 +100,8 @@ function useRegister(form: FormInstance): SignInHook {
           supabase
             .from("parallel_users")
             .select("echelon_id")
-            .or(
-              `echelon_id.eq.${identifier}&password.eq.${password},email.eq.${identifier}&password.eq.${password}`,
-            ),
+            .eq("password", password)
+            .or(`echelon_id.eq.${identifier},email.eq.${identifier}`),
         ]);
 
       if (!userByIdentifierResponse.data?.length) {

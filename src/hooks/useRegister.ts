@@ -6,14 +6,14 @@ import { useRouter } from "next/navigation";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 /**
- * Represents a RegisterHook class.
+ * Type representing a set of hooks for handling user registration process.
  *
  * @typedef {Object} RegisterHook
- * @property {boolean} isLoading - A boolean indicating whether the hook is currently loading.
- * @property {function(_, string): Promise<void>} validateEchelonID - A function that validates an echelon ID.
- * @property {function(_, string): Promise<void>} validateEmail - A function that validates an email address.
- * @property {function(UserData): Promise<void>} saveUser - A function that saves user data.
- * @property {boolean} walletExists - A boolean indicating whether a wallet exists.
+ * @property {boolean} isLoading - Indicates whether the registration process is currently loading.
+ * @property {function} validateEchelonID - Validates the provided Echelon ID.
+ * @property {function} validateEmail - Validates the provided email address.
+ * @property {function} saveUser - Saves the user data.
+ * @property {boolean} walletExists - Indicates whether a wallet already exists for the user.
  */
 type RegisterHook = {
   isLoading: boolean;
@@ -27,10 +27,10 @@ type RegisterHook = {
  * Represents user data.
  *
  * @typedef {Object} UserData
- * @property {string} name - The user's name.
- * @property {string} email - The user's email address.
- * @property {string} password - The user's password.
- * @property {string} echelon_id - The user's echelon ID.
+ * @property {string} name - The name of the user.
+ * @property {string} email - The email address of the user.
+ * @property {string} password - The password of the user.
+ * @property {string} echelon_id - The identifier for the user's echelon.
  */
 type UserData = {
   name: string;
@@ -40,10 +40,10 @@ type UserData = {
 };
 
 /**
- * Register hook
+ * Custom hook for handling user registration functionality.
  *
- * @param {FormInstance} form - The form instance to handle form fields and validation
- * @return {RegisterHook} - An object containing the register hook functions and states
+ * @param {FormInstance} form - The form instance to be used for registration.
+ * @return {RegisterHook} An object containing registration utilities and states.
  */
 function useRegister(form: FormInstance): RegisterHook {
   const { status, address } = useAccount();

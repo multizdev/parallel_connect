@@ -1,7 +1,7 @@
 {
   "env": {
     "shared-node-browser": true,
-    "node":  true,
+    "node": true,
     "browser": true,
     "es2021": true
   },
@@ -56,9 +56,12 @@
     "jsx-a11y/aria-role": "off",
     "jsx-a11y/control-has-associated-label": "off",
     "react/button-has-type": "off",
-    "no-restricted-imports": ["error", {
-      "patterns": [".*"]
-    }],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [".*"]
+      }
+    ],
     "react/jsx-filename-extension": [
       1,
       {

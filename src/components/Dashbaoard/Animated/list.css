@@ -1,11 +1,16 @@
 #card-container {
   display: inline-block;
-  background:url('/cards/container/right.jpg') repeat-y top right,    /* Right */
-  url('/cards/container/left.jpg') repeat-y top left,     /* Left */
-  url('/cards/container/bottom.jpg') repeat-x bottom left,  /* Bottom */
-  url('/cards/container/top.jpg') repeat-x top left;     /* Top */
+  background:
+    url("/cards/container/right.jpg") repeat-y top right,
+    /* Right */ url("/cards/container/left.jpg") repeat-y top left,
+    /* Left */ url("/cards/container/bottom.jpg") repeat-x bottom left,
+    /* Bottom */ url("/cards/container/top.jpg") repeat-x top left; /* Top */
   padding: 10px;
-  background-size: 10px 100%, 10px 100%, 100% 10px, 100% 10px; /* Width of borders */
+  background-size:
+    10px 100%,
+    10px 100%,
+    100% 10px,
+    100% 10px; /* Width of borders */
   background-repeat: repeat-y, repeat-y, repeat-x, repeat-x;
 }
 .ant-switch-checked {
